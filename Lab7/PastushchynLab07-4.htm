@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з формою заповнення замовлення на товар">
+<meta name ="Keywords" charset="Сторінка, НТМL, Форма, Товар">
+<title>Форма заповнення замовлення на товар</title>
+</head>
+<body>
+<form>
+<table bgcolor="lightgreen" border="2" align="center" cellpadding="3" width="40%">
+<thead>
+<tr>
+<th colspan="2"><h2>Ваше замовлення</h2></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td width="57%">1. Номер банківського рахунку</td>
+<td><input type="text" name="banknum" size="28"></td>
+</tr>
+<tr>
+<td>2. Особистий номер користувача</td>
+<td><input type="text" name="usernum" size="28"></td>
+</tr>
+<tr>
+<td>3. Список товарів (виберіть один або більше)</td>
+<td>
+<select nаme="productlist" size="4" multiple>
+<option value="1">Товар 1</option>
+<option value="2">Товар 2</option>
+<option value="3">Товар 3</option>
+<option value="4">Товар 4</option>
+<option value="5">Товар 5</option>
+</td>
+</tr>
+<tr>
+<td>4. Додаткові коментарі до замовлення</td>
+<td><textarea name="comments" cols="28" rows="3" wrap="virtual"></textarea></td>
+</tr>
+<tr>
+<td>5. Вид оплати</td>
+<td><input type="radio" name="paytype" value="1">Готівковий
+<input type="radio" name="paytype" value="2">Безготівковий</td>
+</tr>
+<tr>
+<td colspan="2">
+<input type="checkbox">Отримати дані про залишки на рахунку<br>
+<input type="checkbox">Отримати дані про останні виплати по рахунку
+</td>
+</tr>
+<tr>
+<td colspan="2" align="center">
+<input type="reset" value="Прибрати заповнення"><br><br>
+<input type="submit" value="Відправити">
+</td>
+</tr>
+</tbody>
+</table>
+</form>
+</body>
+</html>
