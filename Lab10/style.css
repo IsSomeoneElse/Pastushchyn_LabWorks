@@ -1,0 +1,39 @@
+body {
+ background-image: url("Image/background.jpg");
+ background-size: cover;
+ background-repeat: no-repeat;
+}
+.text {
+ text-indent: 20px;
+ text-align: justify;
+ font-style: italic;
+ font-size: 18px;
+}
+.margin {
+ margin-left: 20px;
+ margin-right: 20px;
+}
+h1 {
+ text-weight: bold;
+ text-align: center;
+ color: darkblue;
+ font-style: normal;
+}
+.picture {
+ margin: 10px;
+ display: flex;
+ justify-content: center;
+}
+a {
+ font-size: 20px;
+ text-decoration: none;
+}
+a:active {
+ color: black;
+}
+a:visited {
+ color: purple;
+}
+a:link {
+ color: blue;
+}
