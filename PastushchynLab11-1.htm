@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Використання Flexbox layout">
+<meta name ="Keywords" charset="Сторінка, НТМL, CSS, Flexbox layout">
+<meta name="Viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+ box-sizing: border-box;
+}
+body, html {
+ margin: 0;
+ height: 100%;
+}
+.wrapper {
+ display: flex;
+ flex-wrap: wrap;
+ height: 100vh;
+ padding: 3px;
+}
+.block {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ border: 1px solid #ccc;
+ flex-grow: 1;
+ min-height: 24vh;
+ min-width: 24vw;
+}
+.blue {
+ background-color: #5b9bd5;
+}
+.grey {
+ background-color: #6e7d82;
+}
+.light-blue {
+ background-color: #5bd1d1;
+}
+.pink {
+ background-color: #e16b6b;
+}
+.yellow {
+ background-color: #ffc000;
+}
+.green {
+ background-color: #31a475;
+}
+.orange {
+ background-color: #c55a11;
+}
+.row {
+ display: flex;
+ flex-direction: row;
+ gap: 3px;
+}
+.column {
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ gap: 3px;
+}
+@media screen and (max-width: 1200px) {
+ .block-fourth {
+  flex-direction: column;
+ }
+}
+@media screen and (max-width: 950px) {
+ .block-sixth {
+  flex-direction: column;
+ }
+}
+@media screen and (max-width: 750px) {
+ .block-second {
+  flex-direction: column;
+ }
+}
+</style>
+<title>Сторінка з використанням Flexbox layout</title>
+</head>
+<body>
+<div class="wrapper">
+ <div class="column block-first">
+  <div class="row block-second">
+   <div class="column block-third">
+    <div class="block blue"></div>
+    <div class="row block-fourth">
+     <div class="column block-fifth">
+      <div class="row block-sixth">
+       <div class="block light-blue"></div>
+       <div class="block pink"></div>
+      </div>
+      <div class="block green"></div>
+     </div>
+     <div class="block yellow"></div>
+    </div>
+   </div>
+   <div class="block grey"></div>
+  </div>
+  <div class="block orange"></div>
+ </div>
+</div>
+</body>
+</html>
