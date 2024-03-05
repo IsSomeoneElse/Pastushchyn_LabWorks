@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №2 лабораторної роботи по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<title>Завдання 2</title>
+</head>
+<body>
+<h1>Виведення чисел від 0 до 10</h1>
+<button onclick="numbersOutput()">Вивести числа</button><br>
+<output id="numbers"></output>
+<script>
+function numbersOutput(){
+ document.getElementById("numbers").innerHTML = '';
+
+ var n = 0;
+
+ do {
+  if (n === 0) {
+   document.getElementById("numbers").innerHTML += n + ' - це нуль<br>';
+  } else if (n % 2 === 0) {
+   document.getElementById("numbers").innerHTML += n + ' - парне число<br>';
+  } else {
+   document.getElementById("numbers").innerHTML += n + ' - непарне число<br>';
+  }
+
+  n++;
+ } while (n <= 10);
+}
+</script>
+</body>
+</html>

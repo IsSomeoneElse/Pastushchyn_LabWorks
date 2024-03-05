@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №5 лабораторної роботи по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<title>Завдання 5</title>
+</head>
+<body>
+<h1>Конвертація температури за Цельсієм в температуру за Фаренгейтом</h1>
+<button onclick="convertTemperature()">Ввести температуру за Цельсієм</button>
+<script>
+function convertTemperature(){
+ var tc = parseInt(prompt("Введіть температуру за Цельсієм"));
+
+ var tf = (9 / 5) * tc + 32;
+
+ alert("Введена температура за Цельсієм (" + tc + ") рівна відповідній температурі за Фаренгейтом: " + tf + ".");
+}
+</script>
+</body>
+</html>

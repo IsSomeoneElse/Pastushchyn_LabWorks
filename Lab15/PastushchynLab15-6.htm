@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №6 лабораторної роботи по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<title>Завдання 6</title>
+</head>
+<body>
+<h1>Виведення дня тижня за введеним номером дня тижня</h1>
+<button onclick="weekdayCheck()">Ввести номер дня тижня</button>
+<script>
+function weekdayCheck(){
+ var weekday = parseInt(prompt("Введіть номер дня тижня"));
+
+ var weekdayName;
+
+ switch (weekday) {
+  case 1:
+   weekdayName = "Понеділок";
+   break;
+  case 2:
+   weekdayName = "Вівторок";
+   break;
+  case 3:
+   weekdayName = "Середа";
+   break;
+  case 4:
+   weekdayName = "Четвер";
+   break;
+  case 5:
+   weekdayName = "П'ятниця";
+   break;
+  case 6:
+   weekdayName = "Субота";
+   break;
+  case 7:
+   weekdayName = "Неділя";
+   break;
+  default:
+   weekdayName = "Невідомий день тижня, перевірте введене значення";
+ }
+
+ alert("Назва введеного дня тижня: " + weekdayName + ".");
+}
+</script>
+</body>
+</html>

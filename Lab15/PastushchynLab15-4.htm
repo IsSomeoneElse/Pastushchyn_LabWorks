@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №4 лабораторної роботи по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<title>Завдання 4</title>
+</head>
+<body>
+<h1>Виведення місяця і пори року за введеним номером місяця</h1>
+<button onclick="monthCheck()">Ввести номер місяця</button>
+<script>
+function monthCheck(){
+ var month = parseInt(prompt("Введіть номер місяця"));
+
+ var seasonName, monthName;
+
+ switch (month) {
+  case 1: case 2: case 12:
+   seasonName = "Зима";
+   break;
+  case 3: case 4: case 5:
+   seasonName = "Весна";
+   break;
+  case 6: case 7: case 8:
+   seasonName = "Літо";
+   break;
+  case 9: case 10: case 11:
+   seasonName = "Осінь";
+   break;
+  default:
+   seasonName = "Невідома пора року, перевірте введене значення";
+ }
+
+ switch (month) {
+  case 1:
+   monthName = "Січень";
+   break;
+  case 2:
+   monthName = "Лютий";
+   break;
+  case 3:
+   monthName = "Березень";
+   break;
+  case 4:
+   monthName = "Квітень";
+   break;
+  case 5:
+   monthName = "Травень";
+   break;
+  case 6:
+   monthName = "Червень";
+   break;
+  case 7:
+   monthName = "Липень";
+   break;
+  case 8:
+   monthName = "Серпень";
+   break;
+  case 9:
+   monthName = "Вересень";
+   break;
+  case 10:
+   monthName = "Жовтень";
+   break;
+  case 11:
+   monthName = "Листопад";
+   break;
+  case 12:
+   monthName = "Грудень";
+   break;
+  default:
+   monthName = "Невідомий місяць, перевірте введене значення";
+ }
+
+ alert("Назва введеного місяця: " + monthName + ". Він належить до наступної пори року: " + seasonName + ".");
+}
+</script>
+</body>
+</html>

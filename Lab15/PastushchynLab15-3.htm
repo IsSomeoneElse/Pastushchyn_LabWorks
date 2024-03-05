@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №3 лабораторної роботи по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<title>Завдання 3</title>
+</head>
+<body>
+<h1>Виведення result і counter після обробки числа numb</h1>
+<button onclick="numbDivision()">Вивести результат</button><br>
+<h2>Отримане число:</h2>
+<output id="result">-</output>
+<h2>Кількість ітерацій:</h2>
+<output id="counter">-</output>
+<script>
+function numbDivision(){
+ var numb = 10000;
+ var counter = 0;
+
+ while (numb >= 50) {
+  numb /= 2;
+  counter++;
+ }
+
+ var result = numb;
+
+ console.log("Отримане число: " + result);
+ console.log("Кількість ітерацій: " + counter);
+
+ document.getElementById("result").innerHTML = result;
+ document.getElementById("counter").innerHTML = counter;
+}
+</script>
+</body>
+</html>
