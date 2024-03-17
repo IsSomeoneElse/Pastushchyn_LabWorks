@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №1 лабораторної роботи №16 по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+<title>Завдання 1</title>
+<style>
+ img {
+  width: 200px;
+  height: 300px;
+ }
+</style>
+</head>
+<body>
+<h1>Використання властивості onclick</h1>
+<img id="img1" src="Image\nature1.jpg" alt="First image">
+<img id="img2" src="Image\nature2.jpg" alt="Second image">
+<img id="img3" src="Image\nature3.jpg" alt="Third image">
+<script>
+const image1 = document.getElementById('img1');
+const image2 = document.getElementById('img2');
+const image3 = document.getElementById('img3');
+
+image1.onclick = function() {
+ alert(this.src);
+}
+image2.onclick = function() {
+ alert(this.src);
+}
+image3.onclick = function() {
+ alert(this.src);
+}
+</script>
+</body>
+</html>

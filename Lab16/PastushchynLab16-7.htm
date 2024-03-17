@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №7 лабораторної роботи №16 по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+<title>Завдання 7</title>
+</head>
+<body>
+<h1>Використання методів addEventListener та removeEventListener для виведення квадратів чисел</h1>
+<h2>Числа (натисніть на число, щоб відобразити його квадрат):</h2>
+<p id="number1">1</p><br>
+<p id="number2">2</p><br>
+<p id="number3">3</p>
+<script>
+const number1 = document.getElementById('number1');
+const number2 = document.getElementById('number2');
+const number3 = document.getElementById('number3');
+
+function squareDisplayFunction() {
+ const number = parseInt(this.textContent);
+ const square = number * number;
+ this.textContent = square;
+}
+
+number1.addEventListener('click', squareDisplayFunction);
+number2.addEventListener('click', squareDisplayFunction);
+number3.addEventListener('click', squareDisplayFunction);
+</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №9 лабораторної роботи №16 по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+<title>Завдання 9</title>
+<style>
+ div {
+  display: flex;
+  float: left;
+  margin: 10px;
+  padding: 10px;
+ }
+</style>
+</head>
+<body>
+<h1>Використання методів addEventListener та removeEventListener для зміни колькору блоків</h1>
+<div id="div1">First block</div>
+<div id="div2">Second block</div>
+<div id="div3">Third block</div>
+<script>
+const div1 = document.getElementById('div1');
+const div2 = document.getElementById('div2');
+const div3 = document.getElementById('div3');
+
+function paintRedFunction() {
+ this.setAttribute('style', 'background-color: red;');
+ this.removeEventListener('click', paintRedFunction);
+ this.addEventListener('click', paintGreenFunction);
+}
+
+function paintGreenFunction() {
+ this.setAttribute('style', 'background-color: green;');
+ this.removeEventListener('click', paintGreenFunction);
+ this.addEventListener('click', paintRedFunction);
+}
+
+div1.addEventListener('click', paintRedFunction);
+div2.addEventListener('click', paintRedFunction);
+div3.addEventListener('click', paintRedFunction);
+</script>
+</body>
+</html>

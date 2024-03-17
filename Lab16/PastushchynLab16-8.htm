@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №8 лабораторної роботи №16 по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+<title>Завдання 8</title>
+</head>
+<body>
+<h1>Використання методів addEventListener та removeEventListener для перевірки введених значень</h1>
+<h2>Елементи input:</h2>
+<input id="input1" type="text" data-length="3"><br>
+<input id="input2" type="text" data-length="5"><br>
+<input id="input3" type="text" data-length="7">
+<script>
+const input1 = document.getElementById('input1');
+const input2 = document.getElementById('input2');
+const input3 = document.getElementById('input3');
+
+function lengthCheckFunction() {
+ const expectedLength = parseInt(this.getAttribute('data-length'));
+ const inputValue = this.value.trim();
+ const isValid = inputValue.length === expectedLength;
+
+ if (isValid) {
+  this.setAttribute('style', 'border: solid green;');
+ } else {
+  this.setAttribute('style', 'border: solid red;');
+ }
+}
+
+input1.addEventListener('blur', lengthCheckFunction);
+input2.addEventListener('blur', lengthCheckFunction);
+input3.addEventListener('blur', lengthCheckFunction);
+</script>
+</body>
+</html>

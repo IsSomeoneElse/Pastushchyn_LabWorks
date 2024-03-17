@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №5 лабораторної роботи №16 по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+<title>Завдання 5</title>
+</head>
+<body>
+<h1>Використання методів addEventListener та removeEventListener для виведення значень</h1>
+<h2>Елементи input:</h2>
+<input id="input1" type="text"><br>
+<input id="input2" type="text"><br>
+<input id="input3" type="text">
+<h2>Значення:</h2>
+<p id="demo"></p>
+<script>
+const input1 = document.getElementById('input1');
+const input2 = document.getElementById('input2');
+const input3 = document.getElementById('input3');
+
+const demo = document.getElementById('demo');
+
+function valueDisplayFunction() {
+ demo.textContent = this.value;
+}
+
+input1.addEventListener('blur', valueDisplayFunction);
+input2.addEventListener('blur', valueDisplayFunction);
+input3.addEventListener('blur', valueDisplayFunction);
+</script>
+</body>
+</html>

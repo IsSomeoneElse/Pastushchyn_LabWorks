@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №2 лабораторної роботи №16 по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+<title>Завдання 2</title>
+</head>
+<body>
+<h1>Використання методів addEventListener та removeEventListener</h1>
+<a id="link1" href="#" title="">First link</a><br>
+<a id="link2" href="#" title="">Second link</a><br>
+<a id="link3" href="#" title="">Third link</a>
+<script>
+const link1 = document.getElementById('link1');
+const link2 = document.getElementById('link2');
+const link3 = document.getElementById('link3');
+
+function addTitleFunction() {
+ this.setAttribute('title', this.textContent);
+}
+
+link1.addEventListener('mouseover', addTitleFunction);
+link2.addEventListener('mouseover', addTitleFunction);
+link3.addEventListener('mouseover', addTitleFunction);
+</script>
+</body>
+</html>
