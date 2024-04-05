@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з завданням №2 лабораторної роботи №17 по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript">
+<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+<title>Завдання 2</title>
+</head>
+<body>
+<h1>Гра "Вгадай число"</h1>
+<h2>Натисніть кнопку, щоб почати гру</h2>
+<button onclick="numberGuessGame()">Почати гру</button>
+<script>
+function numberGuessGame() {
+ let attempts = 0;
+ let trueNumber = Math.floor(Math.random() * 101);
+ 
+ while (true) {
+  let input = prompt('Введіть число від 0 до 100:');
+  let guess = parseInt(input);
+
+  let diff = Math.abs(guess - trueNumber);
+
+  if (diff === 0) {
+   attempts++;
+   console.log(`${getCurrentDateTime()} Спроба ${attempts}: число ${guess} - вірно`);
+   alert(`Ви вгадали число ${trueNumber}! Кількість спроб: ${attempts}.`);
+   const playAgain = confirm('Бажаєте спробувати ще раз?');
+   if (playAgain) {
+    trueNumber = Math.floor(Math.random() * 101);
+    attempts = 0;
+   } else {
+    break;
+   }
+  } else {
+   console.log(`${getCurrentDateTime()} Спроба ${attempts + 1}: число ${guess} - не вірно`);
+   if (diff <= 5) {
+    alert('Дуже гаряче. Спробуйте ще раз.');
+   } else if (diff <= 10) {
+    alert('Гаряче. Спробуйте ще раз.');
+   } else if (diff <= 20) {
+    alert('Тепліше. Спробуйте ще раз.');
+   } else if (diff <= 35) {
+    alert('Тепло. Спробуйте ще раз.');
+   } else if (diff <= 55) {
+    alert('Холодно. Спробуйте ще раз.');
+   } else if (diff <= 80) {
+    alert('Холодніше. Спробуйте ще раз.');
+   } else {
+    alert('Дуже холодно. Спробуйте ще раз.');
+   }
+   attempts++;
+  }
+ }
+}
+
+function getCurrentDateTime() {
+ const date = new Date();
+ const currentDateTime = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()} ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`;
+ return currentDateTime;
+}
+</script>
+</body>
+</html>
