@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name ="Description" charset="Сторінка з грою для завдання лабораторної роботи №18 по темі Мова програмування JavaScript">
+<meta name ="Keywords" charset="Сторінка, НТМL, JavaScript, Гра, Числа">
+<meta name="Viewport" content="width=device-width, initial-scale=1.0">
+<title>Гра "Послідовні числа"</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="game-container">
+ <div id="game-board"></div>
+ <div id="timer">Час: <span id="time-remaining">60</span> с</div>
+ <button id="restart-button">Почати спочатку</button>
+</div>
+<div id="leaderboard">
+ <h2>Таблиця рекордів</h2>
+ <table id="leaderboard-table">
+  <tr>
+   <th>Гра</th>
+   <th>Час залишку</th>
+  </tr>
+ </table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
